@@ -8,7 +8,7 @@ TEST_CASE("Test FreeFunction") {
     auto mockFreeFunc = FSeam::getFreeFunc();
 
     SECTION("simple call") {
-        REQUIRE(true == freeFunctionSimple());
+        freeFunctionSimple();
         CHECK(mockFreeFunc->verify(FSeam::FreeFunction::freeFunctionSimple::NAME, 1));
         freeFunctionSimple();
         freeFunctionSimple();
