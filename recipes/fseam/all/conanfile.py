@@ -49,5 +49,6 @@ class FseamConan(ConanFile):
         self.cpp_info.name = "FSeam"
         base_path = os.path.join("share", "cmake", "FSeam")
         self.cpp_info.build_modules = [os.path.join(base_path, "FSeamModule.cmake")]
-        self.cpp_info.builddirs.append(os.path.join("bin"), base_path)
+        self.cpp_info.builddirs.append(os.path.join("bin"))
+        self.cpp_info.builddirs.append(base_path)
         self.cpp_info.includedirs = [os.path.join("share", "include")]
