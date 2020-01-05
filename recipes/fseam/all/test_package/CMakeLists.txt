@@ -3,12 +3,7 @@ project(test_package)
 
 set(CMAKE_VERBOSE_MAKEFILE TRUE)
 
-find_package(fseam REQUIRED)
-find_package(catch2 REQUIRED)
-
-# Create aliasses for Catch2 and FSeam as these are expected by addFSeamTests
-set_target_properties(catch2::catch2 PROPERTIES IMPORTED_GLOBAL TRUE)
-add_library(Catch2::Catch2 ALIAS catch2::catch2)
+find_package(FSeam REQUIRED)
 
 add_executable(simpleFreeFunction DependencyToMock.cpp DependencyToMock.hpp main.cpp)
 
