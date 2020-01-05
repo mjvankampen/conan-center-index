@@ -1,8 +1,7 @@
 from conans import ConanFile, CMake, tools
-import os
+import os, subprocess, sys
 
-
-class LibnameConan(ConanFile):
+class FseamConan(ConanFile):
     name = "fseam"
     description = "Mocking library using link seams"
     topics = ("mock", "unit test", "link seam")
@@ -18,6 +17,9 @@ class LibnameConan(ConanFile):
 
     _source_subfolder = "source_subfolder"
     _build_subfolder = "build_subfolder"
+    
+    def system_requirements(self):
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'ply'])
 
     def config_options(self):
         if self.settings.os == 'Windows':
