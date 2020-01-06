@@ -52,3 +52,6 @@ class FseamConan(ConanFile):
         self.cpp_info.builddirs.append(os.path.join("bin"))
         self.cpp_info.builddirs.append(base_path)
         self.cpp_info.includedirs = [os.path.join("share", "include")]
+    
+    def package_id(self):
+        self.info.header_only()
