@@ -1,4 +1,4 @@
 sources:
-  "fix-windows":
-    url: "https://github.com/mjvk/FSeam/archive/fix/windows.zip"
-    sha256: "eec18dfb6dbbef27794e42cbe6baea8c36d5de00d1faf2c2307eb0043aa7c8ec"
+  "master":
+    url: "https://github.com/FreeYourSoul/FSeam/archive/master.zip"
+    sha256: "8034068ddd295eda1cba4b18bda0db0f61784fc7ec40f08c1660ef6f0cc0481f"
