@@ -1,0 +1,15 @@
+diff --git a/oshw/win32/nicdrv.h b/oshw/win32/nicdrv.h
+index 20d5d519bd8d367733f4a6eb43c2c53d745f0a4c..69957f0051f273a90c646822d4dcc63bfe4950be 100644
+--- a/oshw/win32/nicdrv.h
++++ b/oshw/win32/nicdrv.h
+@@ -16,7 +16,9 @@ extern "C"
+ {
+ #endif
+ 
+-#define HAVE_REMOTE
++#ifndef HAVE_REMOTE
++	#define HAVE_REMOTE
++#endif
+ 
+ #include <pcap.h>
+ #include <Packet32.h>
